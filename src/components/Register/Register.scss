@@ -1,0 +1,74 @@
+
+#root {
+	height: 100%;
+}
+#btn{
+	margin-top: 30px;
+}
+html {
+	background-color: #f7f7f7 !important;
+	height: 100%;
+}
+body {
+	background-color: #f7f7f7 !important;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.registerForm_error{
+	margin-left: 10px;
+	color: red;
+}
+.createAccount{
+  color: white;
+  background-color: #33adff!important;
+}
+
+.App {
+	height: 100vh;
+
+		&__backgroundContainer {
+			flex-direction: column;
+			background-color: #f7f7f7 !important;
+			height: 80vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 6%;
+			p {
+				text-align: center;
+			}
+		}
+		&__registerFormContainer {
+			flex-direction: column;
+			background-color: white;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 6%;
+
+				&--registerForm {
+					background-color: white;
+					height: 100%;
+					width: 100%;
+					margin-left: 10px;
+
+					label{
+						margin: 10px;
+						width: 90%;
+						font-weight: 300;
+					}
+
+					h3{
+						margin: 0 0 20px 10px;
+					}
+
+					label input[type='text'],input[type='email'],input[type='password']{
+						width: 80%;
+					}
+
+				}
+
+		}
+}

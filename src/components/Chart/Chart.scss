@@ -1,0 +1,47 @@
+
+#root {
+	height: 100%;
+}
+#chart{
+	border-radius: 2mm;
+}
+#btn{
+	margin-top: 30px;
+}
+html {
+	background-color: #f7f7f7 !important;
+	height: 100%;
+}
+body {
+	background-color: #f7f7f7 !important;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.App {
+	height: 100vh;
+
+		&__backgroundContainer {
+			flex-direction: column;
+			background-color: #f7f7f7 !important;
+			height: 80vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 6%;
+			p {
+				text-align: center;
+			}
+		}
+	
+		&__chartContainer {
+			flex-direction: column;
+			background-color: white;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 6%;
+			text-align: center;
+		}
+}
