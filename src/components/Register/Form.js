@@ -72,7 +72,7 @@ validateField(fieldName, value) {
       if(this.state.phoneValid==='default'){
         phoneValid=false;
       }
-      phoneValid = value.length === 10 && value.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im)?true:false;
+      phoneValid = value.length === 10 && value.match(/^[0-9]*$/im)?true:false;
       this.phoneError = phoneValid ? '': 'Enter correct phone number';
       break;
     default:
@@ -86,13 +86,11 @@ validateField(fieldName, value) {
 
 //validateForm on input change
 validateForm() {
-  console.log(this.state.emailValid===true && this.state.passwordValid===true && this.state.passwordMatch===true && this.state.phoneValid===true && this.state.fullName!=='')
   if(this.state.emailValid===true && this.state.passwordValid===true && this.state.passwordMatch===true && this.state.phoneValid===true && this.state.fullName!=='')
- { 
-  this.setState({formValid: true});}
+  { 
+    this.setState({formValid: true});}
   else{
-    console.log('ok')
-  this.setState({formValid: false});
+    this.setState({formValid: false});
   }
 }
 
@@ -118,9 +116,11 @@ submitButton=()=>{
 checkboxFun(e){
 if(e.target.checked){
   this.state.tc=true
+  this.validateForm()
 }
 else{
   this.state.tc=false
+  this.validateForm()
 }
 }
 
